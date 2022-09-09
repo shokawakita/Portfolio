@@ -1,0 +1,9 @@
+export {default as SectionList} from './SectionList.jsx';
+export {default as Profile} from './Profile.jsx';
+export {default as Artifact} from './Artifact.jsx';
+export {default as Skills} from './Skills.jsx';
+export {default as MainSkills} from './MainSkills.jsx';
+export {default as OtherSkills} from './OtherSkills.jsx';
+export {default as MyWork} from './MyWork.jsx';
+export {default as ReproductionCoding} from './ReproductionCoding.jsx';
+export {default as LearningTools} from './LearningTools.jsx';
