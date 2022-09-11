@@ -14,17 +14,17 @@ const  FormDialog = () => {
   const [email, setEmail]  = useState("");
   const [description, setDescription]  = useState("");
 
-  const inputName = (event) => {
+  const inputName = useCallback((event) => {
     setName(event.target.value)
-  }
+  }, [setName])
 
-  const inputEmail = (event) => {
+  const inputEmail = useCallback((event) => {
     setEmail(event.target.value)
-  }
+  }, [setEmail])
 
-  const inputDescription = (event) => {
+  const inputDescription = useCallback((event) => {
     setDescription(event.target.value)
-  }
+  }, [setDescription])
 
   const validateEmailFormat = (email) => {
     const regex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/

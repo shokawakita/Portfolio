@@ -1,5 +1,6 @@
 import React from "react";
-import {Menu} from './index'
+import {Menu} from './index';
+import {FormDialog} from '../Contact/index';
 
 const HeaderList = (props) => {
   
@@ -22,7 +23,10 @@ const HeaderList = (props) => {
     
       {/* 1100px以上の場合のヘッダーデザイン */}
       <nav className="window-screen-header">
-        <ul>{menus}</ul>
+        <ul>
+          {menus}
+          <li><FormDialog /></li>
+        </ul>
       </nav>
     </header>
   );

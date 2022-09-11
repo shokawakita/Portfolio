@@ -20,9 +20,9 @@ const App = () => {
   // });
 
   // ハンバーガーメニューの切り替えのための関数
-  const toggleCheck = () => {
+  const toggleCheck = useCallback(() => {
     setIsCheck(!isCheck);
-  }
+  }, [isCheck])
 
 
   // Intersection Observerのための参考コード------
@@ -46,13 +46,13 @@ const App = () => {
   
 
   // Learning Toolsのアコーディオン切り替えのための関数
-  const toggleAccordion = (tool) => {
+  const toggleAccordion = useCallback((tool) => {
     const newTools = data.learningTools.map(tool => {
       return({id: tool.id, isOpen: tool.isOpen, name: tool.name, type: tool.type, access: tool.access, usage: tool.usage, comment: tool.comment, click: tool.click, evaluation: tool.evaluation})
     });
     newTools[tool.id - 1].isOpen = !newTools[tool.id - 1].isOpen
     setTools(newTools);
-  }
+  }, [tools])
   
   return (
     <div>

@@ -12,7 +12,7 @@ const data = {
     {id: 2, title: "Profile", click: "profile", src: Water},
     {id: 3, title: "Skills", click: "skills", src: Sea},
     {id: 4, title: "Artifact", click: "artifact", src: Green},
-    {id: 5, title: "LearningTools", click: "learning-tools", src: Flower}
+    {id: 5, title: "LearningTools", click: "learning-tools", src: Flower},
   ],
   mainSkillsData: [
     {id: 1, category: "【OS】", name1: "MacBook", name2: ""},
@@ -113,7 +113,6 @@ const data = {
     {id: 2, name: "Twitter", access: "", class: "bi bi-twitter"},
     {id: 3, name: "Github", access: "https://github.com/shokawakita?tab=repositories", class: "bi-github"}
   ]
-  
 }
 
 export default data;
