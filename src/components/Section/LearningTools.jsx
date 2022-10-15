@@ -23,6 +23,7 @@ const LearningTools = (props) => {
             onClick={() => props.toggleAccordion(tool)} 
             className="theme">
               【{tool.name}】
+            <span className={tool.isOpen ? "appear" : ""}>↓</span>
           </p>
 
         
@@ -53,7 +54,7 @@ const LearningTools = (props) => {
       {/* セクション始まりの定型テキスト */}
       <div className="beginning">
         <h2 className="title">Learning Tools</h2>
-        <p className="beginning-text container">こちらでは学習や参考にしたサイトや使用したツールのご紹介を行っています。サイトのURLだけでなく、学習してみたサイトそれぞれの用途や、私個人のおすすめ度と所感も記述してありますので「プログラミングを学んでみたい!」と方は必要に応じてこちらも是非参考にしてみてください。</p>
+        <p className="beginning-text container">こちらでは学習や参考にしたサイトや使用したツールのご紹介を行っています。サイトのURLだけでなく、学習してみたサイトそれぞれの用途や、私個人のおすすめ度と所感も記述してありますので「プログラミングを学んでみたい!」という方は必要に応じてこちらも是非参考にしてみてください。</p>
       </div>
 
       

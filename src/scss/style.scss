@@ -329,7 +329,6 @@ header{
     border-bottom: 1px solid #eee;
     padding: 64px 0 96px 0;
 
-
     & > article {
       display: grid;
       margin: 0 auto;
@@ -339,25 +338,39 @@ header{
       gap: 36px 24px;
       font-size: 0.8rem;
       
-      
-      ul {
+      & > ul {
         margin: 0;
         padding: 32px 16px;
         text-align: center;
         border: 1px solid black;  
         border-radius: 4px;
       }
+    }
+
+    & > ul {
+      margin: 64px auto;
+      width: calc(100% - 64px);
+
+      & > li {
+        padding-bottom: 12px;
+        & > span {text-decoration: underline;}
+        & > p {padding-left: 32px;}
+      }
       
-      
-      @media(min-width: 900px){
+    }
+
+    @media(min-width: 900px){
+      & > article {
         max-width: 800px;
         grid-template-columns: repeat(3, auto);
         grid-template-rows: repeat(3, 200px);
         gap: 48px 48px;
         
-        ul {
-          padding: 40px;
-        }
+        & > ul {padding: 40px;} 
+      }
+
+      ul {
+        
       }
     }
   }
@@ -485,6 +498,36 @@ header{
       }
     }
   }
+
+  .art-details {
+    color: blue;
+    display: block;
+    text-decoration: underline;
+  }
+  .work-details, .work-details2 {
+    position: fixed;
+    top: 64px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(210, 210, 210, 0.9);
+    z-index: 10;
+    text-align: center;
+    padding-top: 16px;
+
+    img {
+      width: 500px;
+      height: calc(100% - 16px);
+    }
+
+    #image-style {width: calc(100% - 64px);}
+
+    @media(max-width: 900px){img {width: 50%;}}
+    @media(max-width: 700px){
+      overflow-y: scroll;
+      img {width: calc(100% - 12px);}
+    }
+  }
 }
 
 // ---------------------------------
@@ -530,6 +573,14 @@ header{
         padding: 12px 0;
         margin: 0;
         user-select: none;
+
+        span {
+          display: none;
+
+          &.appear {
+            display: inline;
+          }
+        }
       }
 
       article {
@@ -549,10 +600,9 @@ header{
             h4 {
               text-decoration: underline;
               
-                span {
-                  text-decoration: none;
-                  padding-left: 64px;
-                }
+              span {
+                padding-left: 64px;
+              }
             }
           }
     

@@ -13,6 +13,16 @@ const MainSkills = (props) => {
     )
   })
 
+  const mainSkillsDetails = props.mainSkillsData.map(main => {
+    return (
+      <li key={main.id}>
+        <span>{main.name1}</span>
+        <p>　{main.comment1}</p>
+        <span>{main.name2}</span>
+        <p>　{main.comment2}</p>
+      </li>
+    )
+  })
   return(
     <div className="main-skills  container">
 
@@ -23,6 +33,9 @@ const MainSkills = (props) => {
         {/* 呼び出し */}
         {mainSkills}
       </article>
+
+      <ul>{mainSkillsDetails}</ul>
+
     </div>
   );
 }

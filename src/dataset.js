@@ -4,7 +4,7 @@ import Green from './img/green.jpg';
 import Sea from './img/sea.jpg';
 import Water from './img/water.jpg';
 import Todo from './img/Todo.png';
-import Chatbot from './img/Chatbot.png';
+// import Chatbot from './img/Chatbot.png';
 
 const data = {
   menuData: [
@@ -15,14 +15,14 @@ const data = {
     {id: 5, title: "LearningTools", click: "learning-tools", src: Flower},
   ],
   mainSkillsData: [
-    {id: 1, category: "【OS】", name1: "MacBook", name2: ""},
-    {id: 2, category: "【使用言語】", name1: "JavaScript", name2: "Scss"},
-    {id: 3, category: "【フレームワーク】", name1: "React.js", name2: ""},
-    {id: 4, category: "【コードエディタ】", name1: "VS Code", name2: ""},
-    {id: 5, category: "【開発ツール】", name1: "npm", name2: "Webpack"},
-    {id: 6, category: "【クラウドサービス】", name1: "Firebase", name2: "Github"},
-    {id: 7, category: "【チャットツール】", name1: "Slack", name2: ""},
-    {id: 8, category: "【タスク管理ツール】", name1: "Trello", name2: ""},
+    {id: 1, category: "【OS】", name1: "MacBook", name2: "", comment1: "MacBookを使用しています",comment2: "", open: false},
+    {id: 2, category: "【使用言語】", name1: "JavaScript", name2: "Scss", comment1: "基礎的な学習をドットインストールさんの学習サイト「JavaScript」編をすべて視聴して学びました。以下にも記述していますが、「しまぶーのIT大学」でJavaScriptの歴史的背景を学んだ上でモダンJavaScriptの学習も行いました。",comment2: "基本的に作品を作成するときには、スタイルをネスト形式で記述したり、＠Mixinなどの機能を使用することのできるSCSSをwebpackのローダーで読み混んでスタイルを切り分けて制作しています", open: false},
+    {id: 3, category: "【フレームワーク】", name1: "React.js", name2: "", comment1: "コンポーネントやJSXなどのReactの基本的な学習はYouTubeを中心に学習しました。私は、React　Hooksを使用した作品が得意でCreate-React-appでの作成ではなくwebpackでの設定を行って作成することで、実際のReact開発でも柔軟な設定ができるように学習を進めてきました。このポートフォリオもReact　Hooksを使用して作成しました。",comment2: "", open: false},
+    {id: 4, category: "【コードエディタ】", name1: "VS Code", name2: "", comment1: "VS Codeを使用しています。Emmet機能、拡張機能や、Gitのnpmの管理のためのターミナルコマンドの利用、「Search」機能を利用しています。",comment2: "", open: false},
+    {id: 5, category: "【開発ツール】", name1: "npm", name2: "Webpack", comment1: "モダンJavaScriptを理解する際に一緒に学びました。具体的には、material-UIの使用時やバベルローダー使用時のパッケージインストールや、scriptの設定を学習しました。",comment2: "モダンJavaScriptを理解する際に一緒に学びました。具体的には、webpack.config.jsの設定（ホットリロードやBabel、プラグインの設定）を学習しました。", open: false},
+    {id: 6, category: "【クラウドサービス】", name1: "Firebase", name2: "Github", comment1: "クラウドサービスの導入部分を学びました。具体的には、作成したコードをFirebaseのサービスを利用するためのinit、該当プロジェクトの作成やデプロイ、hostingサービスやFaas、Databaseの登録で使用してみました。",comment2: "ソースコード管理ツールとして学びました。具体的には、VS Codeで作成したコードをGitHubにプッシュコマンドを使用して登録したり、GitHubでのソースコード管理時の.gitignoreを使用して、Node_modulesを管理しない方法について学びました。また、Qiitaなどと並行して、公開されているGitHubのリポジトリを学習の一環で閲覧する際にも使用しました。", open: false},
+    {id: 7, category: "【チャットツール】", name1: "Slack", name2: "", comment1: "「お問い合わせフォーム」の受信先としてSlackを使用して受信するために学習しました。具体的には、webhook APIの取得を行ってコードに反映させる作業を行った経験があります。",comment2: "", open: false},
+    {id: 8, category: "【タスク管理ツール】", name1: "Trello", name2: "", comment1: "学習の予定や転職の準備の把握のためのツールとして利用する他に、作品の作成のための参考のために使用しました。",comment2: "", open: false},
   ],
   otherSkillsData: {
       languages : [
@@ -33,20 +33,25 @@ const data = {
       {id: 5, name: "Git", evaluation: "★★☆"},
       {id: 6, name: "UNIX Command", evaluation: "★★☆"},
       {id: 7, name: "TypeScript", evaluation: "★★☆"},
-      {id: 8, name: "Vue.js", evaluation: "★★☆"},
+      // {id: 8, name: "Vue.js", evaluation: "★★☆"},
       {id: 9, name: "Node.js", evaluation: "★★☆"},
+      {id: 10, name: "Express", evaluation: "★☆☆"},
     ],
       tools : [
-      {id: 1, name: "Docker", evaluation: "★★☆"},
-      {id: 2, name: "WordPress", evaluation: "★★☆"},
+      // {id: 1, name: "Docker", evaluation: "★★☆"},
+      // {id: 2, name: "WordPress", evaluation: "★★☆"},
       {id: 3, name: "PhotoShop", evaluation: "★☆☆"},
-      {id: 4, name: "SEO", evaluation: "★☆☆"},
+      {id: 4, name: "Feedly", evaluation: "★★☆"},
+      {id: 5, name: "ESLint", evaluation: "★☆☆"},
+      {id: 6, name: "Prettier", evaluation: "★☆☆"},
+      // {id: 7, name: "SEO", evaluation: "★☆☆"},
     ]
   },
   artifactData : {
     myWork : [
-      {id: 1, img: Todo, access: "https://todo-application-d147e.web.app/", class: "bi bi-envelope", name: "Todoリスト", point: "こちらの作品は、プログラミング学習サイトを参考にゼロから作成してみたTodoリスト管理アプリです。こだわった点としては、オプション機能やメモを追加してみたことです。使用したフレームワークはReact.jsで、関数コンポーネントを使用していますす。環境構築はwebpackでScssと一緒にバンドル・コンパイルしています。"},
-      {id: 2, img: Chatbot, access: "https://chatbot-demo-b265d.web.app/", name: "Chatbot", point: "こちらの作品は「トラゼミ」さんが動画配信しているChatbot-demoの作品から作成したものです。特徴としてはFirebaseに保存してあるデータを呼び出している点と、非同期処理を導入している点です。こちらの作品を作る際、動画投稿日は約2年前だったため、そのままコーディングしても反映されなかったことがとても苦労しました。したがって、動かない部分はすべて自分で公式ドキュメントを読んだりして進めていきました。その結果、ただ動画で言ったとおりに学習するだけでなく、たくさんの副産物を手に入れることができました。"}
+      // {id: 1, img: Todo, access: "https://todo-application-d147e.web.app/", name: "Todoリスト", point: "こちらの作品は、プログラミング学習サイトを参考にゼロから作成してみたTodoリスト管理アプリです。こだわった点としては、オプション機能やメモを追加してみたことです。使用したフレームワークはReact.jsで、関数コンポーネントを使用していますす。環境構築はwebpackでScssと一緒にバンドル・コンパイルしています。"},
+      {id: 2, img: "../img/TaskManagerApp.png", access: "https://task-manager-fb3b0.firebaseapp.com/", name: "Task Manager App", setting: "",point: "こちらの作品は、「Fog Creek Software」社が開発したwebアプリケーション「Trello」を模倣したアプリケーションです。React Hooksの学習の応用として作成しました。予め製作期間を15日間と決めて作成してみました。途中何度も挫折しました（笑）。デザインにこだわり、直感的に操作できるような工夫やドラッグアンドドロップ機能などがあります。一度作品に触れていただくと実感できるかと思いますのでどうぞご覧ください！（⚠レスポンシブ対応していません）"},
+      // {id: 2, img: Chatbot, access: "https://chatbot-demo-b265d.web.app/", name: "Chatbot", point: "こちらの作品は「トラゼミ」さんが動画配信しているChatbot-demoの作品から作成したものです。特徴としてはFirebaseに保存してあるデータを呼び出している点と、非同期処理を導入している点です。こちらの作品を作る際、動画投稿日は約2年前だったため、そのままコーディングしても反映されなかったことがとても苦労しました。したがって、動かない部分はすべて自分で公式ドキュメントを読んだりして進めていきました。その結果、ただ動画で言ったとおりに学習するだけでなく、たくさんの副産物を手に入れることができました。"}
     ],
     reproductionCoding : {
       dotinstall : [

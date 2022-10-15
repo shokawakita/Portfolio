@@ -38,10 +38,10 @@ const FooterList = (props) => {
 
           {/* 別のサイトの紹介 */}
           <article className="blog">
-          <h3 className="footer-title">Others</h3>
-            <p><a href="#">My Blog</a></p>
+          <h3 className="footer-title">My Site</h3>
+            <p><a target="_blank" href="#">My Blog</a></p>
+            <p><a target="_blank" href="https://shokawakita.github.io/mysite/">Portfolio(過去のポートフォリオ)</a></p>
             <FormDialog/>
-            <p><a href="#">QandA</a></p>
           </article>
         </div>
         <div className="fin container">

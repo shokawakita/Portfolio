@@ -88,9 +88,13 @@ const  FormDialog = () => {
   return (
     <p className="contact">
       <a 
+        href="#"
+        target="_blank"
         variant="outlined" 
-        onClick={handleClickOpen}
-        >
+        onClick={(e) => {
+          e.preventDefault()
+          handleClickOpen()
+        }}>
         Contact
       </a>
       <Dialog open={open} onClose={handleClose}>
