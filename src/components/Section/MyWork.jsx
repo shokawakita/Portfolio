@@ -36,7 +36,7 @@ const MyWork = (props) => {
           href="#"
           className="art-details"
           >stateの詳細(board)</a>
-        <a href="https://github.com/shokawakita/Task-Manager-App" className="art-details">ソースコード</a>
+
         <div 
           className="work-details"
           style={{display: (open ? "block": "none")}}
@@ -53,6 +53,11 @@ const MyWork = (props) => {
         >
           <img src="../../img/boardState.png" id="image-style"/>
         </div>
+        <a 
+          href="https://github.com/shokawakita/Task-Manager-App" 
+          className="art-details"
+          target="_blank"  
+        >ソースコード</a>
       </article>
     );
   });
