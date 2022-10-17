@@ -4,7 +4,11 @@ import Green from './img/green.jpg';
 import Sea from './img/sea.jpg';
 import Water from './img/water.jpg';
 import Todo from './img/Todo.png';
-// import Chatbot from './img/Chatbot.png';
+import Chatbot from './img/Chatbot.png';
+import boardState from './img/boardState.png';
+import design1 from './img/design1.png';
+import design2 from './img/design2.png';
+import design3 from './img/design3.png';
 
 const data = {
   menuData: [
@@ -50,8 +54,8 @@ const data = {
   artifactData : {
     myWork : [
       // {id: 1, img: Todo, access: "https://todo-application-d147e.web.app/", name: "Todoリスト", point: "こちらの作品は、プログラミング学習サイトを参考にゼロから作成してみたTodoリスト管理アプリです。こだわった点としては、オプション機能やメモを追加してみたことです。使用したフレームワークはReact.jsで、関数コンポーネントを使用していますす。環境構築はwebpackでScssと一緒にバンドル・コンパイルしています。"},
-      {id: 2, img: "../img/TaskManagerApp.png", access: "https://task-manager-fb3b0.firebaseapp.com/", name: "Task Manager App", setting: "",point: "こちらの作品は、「Fog Creek Software」社が開発したwebアプリケーション「Trello」を模倣したアプリケーションです。React Hooksの学習の応用として作成しました。予め製作期間を15日間と決めて作成してみました。途中何度も挫折しました（笑）。デザインにこだわり、直感的に操作できるような工夫やドラッグアンドドロップ機能などがあります。一度作品に触れていただくと実感できるかと思いますのでどうぞご覧ください！（⚠レスポンシブ対応していません）"},
-      // {id: 2, img: Chatbot, access: "https://chatbot-demo-b265d.web.app/", name: "Chatbot", point: "こちらの作品は「トラゼミ」さんが動画配信しているChatbot-demoの作品から作成したものです。特徴としてはFirebaseに保存してあるデータを呼び出している点と、非同期処理を導入している点です。こちらの作品を作る際、動画投稿日は約2年前だったため、そのままコーディングしても反映されなかったことがとても苦労しました。したがって、動かない部分はすべて自分で公式ドキュメントを読んだりして進めていきました。その結果、ただ動画で言ったとおりに学習するだけでなく、たくさんの副産物を手に入れることができました。"}
+      {id: 2, img: "../img/TaskManagerApp.png", access: "https://task-manager-fb3b0.firebaseapp.com/", name: "Task Manager App", point: "こちらの作品は、「Fog Creek Software」社が開発したwebアプリケーション「Trello」を模倣したアプリケーションです。React Hooksの学習の応用として作成しました。予め製作期間を15日間と決めて作成してみました。途中何度も挫折しました（笑）。デザインにこだわり、直感的に操作できるような工夫やドラッグアンドドロップ機能などがあります。一度作品に触れていただくと実感できるかと思いますのでどうぞご覧ください！（⚠レスポンシブ対応していません）", open: false, source: "https://github.com/shokawakita/Task-Manager-App", design: [design1, design2]},
+      {id: 3, img: Chatbot, access: "https://chatbot-8636c.web.app/", name: "Chatbot", point: "こちらの作品は「トラゼミ」さんが動画配信しているChatbot-demoの作品から作成したものです。特徴としてはFirebaseに保存してあるデータを呼び出している点と、非同期処理を導入している点です。こちらの作品を作る際、動画投稿日は約2年前だったため、そのままコーディングしても反映されなかったことがとても苦労しました。したがって、動かない部分はすべて自分で公式ドキュメントを読んだりして進めていきました。その結果、ただ動画で言ったとおりに学習するだけでなく、たくさんの副産物を手に入れることができました。", open: false, source: "https://github.com/shokawakita/chatbot-App", design: [design3]}
     ],
     reproductionCoding : {
       dotinstall : [

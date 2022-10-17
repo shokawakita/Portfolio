@@ -2,20 +2,39 @@ import React, {useState} from "react";
 
 const MyWork = (props) => {
   const [open, setOpen] = useState(false);
-  const [open2, setOpen2] = useState(false);
+  const [data, setData] = useState(props.artifactData.myWork)
 
-  const workConfig = (e) => {
+  console.log(data)
+
+  const workConfig = (e, index) => {
     e.preventDefault();
-    setOpen(!open)
+    const pos = props.artifactData.myWork.map(data => {
+      return data.id
+    }).indexOf(index.id)
+    
+    const newData = data.map((list, index) => {
+      return {
+        id: list.id,
+        img: list.img,
+        access: list.access,
+        name: list.name,
+        point: list.point,
+        source: list.source,
+        isOpen: (index === pos ? !list.isOpen: false),
+        design: list.design,
+      }
+    })
+
+    setData(newData);
   }
 
-  const workConfig2 = (e) => {
+  const showState = (e) => {
     e.preventDefault();
-    setOpen2(!open2);
+    setOpen(!open);
   }
 
   // データをMapメソッドを利用して表示するための定義
-  const artifact = props.artifactData.myWork.map(artifact => {
+  const artifact = data.map(artifact => {
     return (
       <article className="art" key={artifact.id}>
         <p className="theme">【{artifact.name}】</p>
@@ -27,34 +46,41 @@ const MyWork = (props) => {
         <p className="point">【Point】</p>
         <p className="point-text">{artifact.point}</p>
         <a 
-          onClick={(e) => workConfig(e)} 
+          onClick={(e) => workConfig(e, artifact)} 
           href="#"
           className="art-details"
           >作品の詳細</a>
+
+        {/* Task Manager　Appのみの表示 */}
         <a 
-          onClick={(e) => workConfig2(e)}
-          href="#"
+        style={{display: (artifact.id === 2 ? "block" : "none")}}
+          onClick={(e) => showState(e)}
+          href="#"  
           className="art-details"
           >stateの詳細(board)</a>
 
         <div 
           className="work-details"
-          style={{display: (open ? "block": "none")}}
-          onClick={(e) => workConfig(e)}  
+          style={{display: (artifact.isOpen ? "block": "none")}}
+          onClick={(e) => workConfig(e, artifact)}  
         >
-          <span><i className="bi-bi-x-lg"></i></span>
-          <img src='../../img/design1.png'/>
-          <img src='../../img/design2.png'/>
+          {artifact.design.map((list, index) => {
+            return (
+              <img key={index} src={list} />
+            )
+          })}
+
         </div>
+        {/* Task Manager　Appのみの表示 */}
         <div
           className="work-details2"
-          style={{display: (open2 ? "block": "none")}}
-          onClick={(e) => workConfig2(e)}
+          style={{display: (open ? "block": "none")}}
+          onClick={(e) => showState(e)}
         >
           <img src="../../img/boardState.png" id="image-style"/>
         </div>
         <a 
-          href="https://github.com/shokawakita/Task-Manager-App" 
+          href={artifact.source}
           className="art-details"
           target="_blank"  
         >ソースコード</a>
